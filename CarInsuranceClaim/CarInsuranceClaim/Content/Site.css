@@ -1,0 +1,30 @@
+﻿body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+
+#bottomText {
+    
+    
+    text-shadow: 1px 2px #ffffff;
+}
+
+.pic {
+    max-width: 50px;
+}
+
+.conPic {
+    width: 900px;
+    height: 400px;
+}
+
+#icon {
+    margin-top: 6px;
+}
+

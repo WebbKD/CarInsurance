@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>@ViewBag.Title - Car Insurance</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="~/Content/materialize.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+
+
+</head>
+<body>
+    <!-- Collapsible content -->
+    <div class="navbar-fixed">
+    <nav class="indigo darken-4">
+        <div class="nav-wrapper indigo darken-4 container">
+            <a href="~/Home/Index" class="brand-logo" id="icon"><img src="https://png.icons8.com/spiderweb/android/50/ffffff"></a>
+            <a href="~/Home/Index" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="~/Home/Index">Home</a></li>
+               <li>@Html.Partial("_LoginPartial")</li>
+            </ul> 
+        </div>
+    </nav>
+    </div>
+
+    <ul class="side-nav" id="mobile-demo">
+        <li><a href="~/Home/Index">Home</a></li>
+        <li>@Html.Partial("_LoginPartial")</li>
+    </ul>
+
+    <!--/.Navbar-->
+    <main>
+        @RenderBody()
+    </main>
+
+    <footer class="page-footer  indigo darken-4">
+        <div class="container">
+            <div class="row">
+               
+            </div>
+        </div>
+        <div class="footer-copyright">
+           
+        </div>
+    </footer>
+
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/materialize.min.js"></script>
+    @Scripts.Render("~/Scripts/init.js")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

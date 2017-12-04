@@ -1,0 +1,88 @@
+﻿
+@{
+    ViewBag.Title = "AddAccidentForm";
+}
+
+<h2 class="center">Please Make Your Claim</h2>
+
+<div class="row">
+    <div class="container">
+        <div class="card">
+            <div class="container">
+            <form class="col s12" action="ConfirmResults" method="post" enctype="multipart/form-data">
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input id="dateOf" type="text" class="datepicker" name="claimDate" required>
+                        <label for="dateOf">Date Of Accident</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input id="timeOf" type="text" class="timepicker" name="claimTime" required>
+                        <label for="timeOf">Time Of Accident</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input id="involedPolicyNumber" type="number" name="involedPolicyNumber" maxlength="10" required>
+                        <label for="involedPolicyNumber">Involed Policy Number</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input id="involedLicensePlates" type="text" name="involedLicensePlate" maxlength="8" required>
+                        <label for="involedLicensePlates">Involed License Plates</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <textarea id="accidentDes" class="materialize-textarea" name="Des" maxlength="150" required></textarea>
+                        <label for="accidentDes">Description of Accident</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="file-field input-field col s6">
+                        <div class="btn">
+                            <span>File</span>
+                            <input type="file" name="file">
+                        </div>
+                        <div class="file-path-wrapper">
+                            <input class="file-path validate" type="text" name="file" required>
+                        </div>
+                    </div>
+                    <div class="input-field col s6">
+                        <input id="location" type="text" name="seceneLocation" maxlength="30" required>
+                        <label for="location">Location of Accident</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input id="shopOneDetails" type="text" placeholder="Name, Address, Phone Number" name="claimRepairOneD" maxlength="70" required>
+                        <label for="shopOneDetails">Shop One Details</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input id="shopOneEstimate" type="number" name="claimRepairOneE" min="1" step="any" required>
+                        <label for="shopOneEstimate">Shop One Estimate</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input id="shopTwoDetails" type="text" placeholder="Name, Address, Phone Number" name="claimRepairTwoD" maxlength="70" required>
+                        <label for="shopTwoDetails">Shop Two Details</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input id="shopTwoEstimate" type="number" name="claimRepairTwoE" min="1" step="any" required>
+                        <label for="shopTwoEstimate">Shop Two Estimate</label>
+                    </div>
+                </div>
+                <input type="text" name="id" class="hide" value="@User.Identity.Name">
+                <br /><br />
+                <button type="submit" class="btn btn-default" name="action">Submit</button>
+            </form>
+            
+               
+          </div>
+        </div>
+    </div>
+</div>

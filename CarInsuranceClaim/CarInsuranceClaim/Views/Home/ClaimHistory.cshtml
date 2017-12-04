@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "ClaimHistory";
+}
+
+<h2>ClaimHistory</h2>
+
+<div class="container">
+<table class="stripe">
+    <tbody>
+        @foreach (var claim in ViewBag.History)
+        {
+            <tr>
+                <td>@claim.ClaimID</td>
+                <td>@claim.ClaimDate</td>
+                <td>@claim.ClaimTime</td>
+                <td>@claim.SeceneLocation</td>
+                <td>@claim.ClaimDescription</td>
+                <td>@claim.ClaimRepairShopOneDetails</td>
+                <td>@claim.ClaimRepairShopOneEstimate</td>
+                <td>@claim.ClaimRepairShopTwoDetails</td>
+                <td>@claim.ClaimRepairShopTwoEstimate</td>
+                <td>@claim.PersonInvoledPolicyNumber</td>
+                <td>@claim.PersonInvoledLicensePlate</td>
+                <td><img class="pic" src="~/Content/Images/@claim.ClaimIMG"></td>
+            </tr>
+        }
+    </tbody>
+</table>
+</div>

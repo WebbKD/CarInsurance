@@ -1,0 +1,87 @@
+﻿
+@{
+    ViewBag.Title = "ConfirmResults";
+}
+
+
+<div class="container">
+    <div class="row">
+        <h3 class="center-align">Thank you for your submission</h3>
+    </div>
+    <div class="row">
+        <div class="card hoverable">
+            <div class="container">
+            <div class="row">
+                <div class="col s6">
+                    <h4>Date Of accident</h4>
+                    <p style="font-size:medium;">The accident occured on this @ViewBag.Date</p>
+                </div>
+                <div class="col s6">
+                    <h4>Location of Accident</h4>
+                    <p style="font-size:medium;">
+                        It happened at this location @ViewBag.Secene
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                    <div class="container">
+                        <div class="row">
+                            <h4 class="center-align">Description</h4>
+                            <p class="center-align" style="font-size:medium;"> @ViewBag.Des </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="container">
+            <h3 class="center-align">Person Involed Information</h3>
+            <div class="col s6">
+                <h4>Policy Number</h4>
+                <p style="font-size:medium;">@ViewBag.PolicyNumber</p>
+            </div>
+            <div class="col s6">
+                <h4>Linese Plate</h4>
+                <p style="font-size:medium;">@ViewBag.PolicyPlate</p>
+            </div>
+        </div>
+     </div>
+
+
+    <div class="row">
+        <div class="card hoverable">
+            <h3 class="center-align">Repair Information</h3>
+            <div class="row">
+                
+                <div class="col s6">
+                    <h5 class="center-align">Repair Shop Details</h5>
+                    <p class="center-align" style="font-size:medium;">@ViewBag.ShopOneD</p>
+                </div>
+                <div class="col s6">
+                    <h5 class="center-align">Repair Shop Estimate</h5>
+                    <p class="center-align" style="font-size:medium;">$@ViewBag.ShopOneE</p>
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="col s6">
+                    <h5 class="center-align">Repair Shop Details</h5>
+                    <p class="center-align" style="font-size:medium;">@ViewBag.ShopTwoD</p>
+                </div>
+                <div class="col s6">
+                    <h5 class="center-align">Repair Shop Estimate</h5>
+                    <p class="center-align" style="font-size:medium;">$@ViewBag.ShopTwoE</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <img class="conPic center-align" src="~/Content/Images/@ViewBag.Img" />
+    </div>
+    <div class="row">
+        <h4 class="center-align"> We will email you in 3-5 days. Thank you.</h4>
+    </div>
+</div>
